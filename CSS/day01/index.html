@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div>
-        
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .div-parent{
+          height: 200px;
+          overflow: hidden;
+      }
+      .div-parent div{
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      .div-parent>div {
+          height:400px;
+          width: 400px;
+          background: red; 
+      }
+      .div-parent>div>div {
+          height:380px; 
+          width: 380px;
+          background: orange; 
+          margin: 10px;
+      }
+      .div-parent>div>div>div {
+          height:360px; 
+          width: 360px;
+          background: yellow; 
+          margin: 10px;
+      }
+      .div-parent>div>div>div>div {
+          height:340px; 
+          width: 340px;
+          background: green; 
+          margin: 10px;
+      }
+      .div-parent>div>div>div>div>div {
+          height:320px; 
+          width: 320px;
+          background: cyan; 
+          margin: 10px;
+      }
+      .div-parent>div>div>div>div>div>div {
+          height:300px; 
+          width: 300px;
+          background: blue; 
+          margin: 10px;
+      }
+      .div-parent>div>div>div>div>div>div>div {
+          height:280px; 
+          width: 280px;
+          background: violet; 
+          margin: 10px;
+      }
+      .div-parent>div>div>div>div>div>div>div>div {
+          height:260px; 
+          width: 260px;
+          background: white; 
+          margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-parent">
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                      <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
