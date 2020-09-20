@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-.header::after{
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+.clearfix::after{
 content: "";
 clear: both;
 display: block;
@@ -23,12 +28,38 @@ border: 1px solid red;
     border: 1px solid red;
     float: left; 
 }
+.main{
+    width: 800px; 
+    padding-left: auto;
+    padding-right: auto;
+}
+.x{ 
+    margin-right: -12px;
+}
+.main img{
+    width: 191px;
+    height: 200px;
+    border: 1px solid red;
+    margin-right: 12px; 
+    float: left;
+}
 </style>
 </head>
 <body>
-    <header class="header">
+    <header class="header clearfix">
         <div class="div"></div>
         <nav class="nav"></nav>
     </header>
+    <div>
+        <aside></aside>
+        <main class="main">
+            <div class="x clearfix">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        </main>
+    </div>
 </body>
 </html>
