@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+        .containers{
+            animation:xxx 2s
+        }
+        @keyframes xxx{
+            0% {
+                transform: translate(200px,200px);;
+            }
+            50%{
+                transform: translate(200px,400px);
+            }
+            100%{
+                background-color: royalblue;
+            }
+        }
+    </style>
+</head>
+<body>
+     <div id='container' class="container">
+
+     </div>
+     <button id='btn'> 移动 </button>
+     <script>
+         btn.onclick=()=>container.classList.add("containers")
+        </script>>
+</body>
+</html>
