@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .conteniar{
+            display: flex; 
+            position: relative;
+            margin: 100px;
+        }
+        .conteniar:hover{
+            transform: scale(1.1);
+        }
+      .div1 {
+        width: 40px;
+        height: 40px;
+        border: 1px solid red;
+        border-radius: 100%;
+        background-color: red;
+      }
+      .div2 {
+        width: 40px;
+        height: 40px;
+        border: 1px solid red;
+        border-radius: 100%;
+        background-color: red;
+      }
+      .div3 {
+        width: 40px;
+        height: 40px;
+        border: 1px solid red;
+        position:absolute; 
+        top:19px;
+        left: 20px;
+        background-color: red;
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+      <div class="conteniar">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+      </div> 
+  </body>
+</html>
