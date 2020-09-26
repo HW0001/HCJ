@@ -8,8 +8,52 @@
 <body>
     <script>
         //排序算法
-        
+        //1.选择排序
+        function orderbysel(arrs){
+            if(arrs.length<=1) return arrs
+            var index = minIndexOf(arrs)
+            var narr=arrs.splice(index,1) 
+            return narr.concat(orderbysel(arrs))
+        }
+        function minIndexOf(arrs){
+            return arrs.indexOf(Math.min.apply(null,arrs))
+        }
+        var arr=[10,2,3,66,4,6,2,2,3,5]
+       // console.log(orderbysel(arr))
 
+        //2.快速排序
+        function  quickorder(arrs){
+            if(arrs.length<2) return arrs
+            var left = []
+            var right = []
+            var index=Math.floor(arrs.length/2)
+            for (let i = 0; i < arrs.length; i++) {
+                  if(i!==index)
+                  {
+                      arrs[i]>arrs[index] && right.push(arrs[i])
+                      arrs[i]<=arrs[index] && left.push(arrs[i])
+                  }
+            }
+            return quickorder(left).concat(arrs[index],quickorder(right))
+        }
+        var arr=[10,2,3,66,4,6,2,2,3,5]
+        //console.log(quickorder(arr))
+
+        //3.归并排序
+        function mergeorder(arrs){
+            if(arrs.length<2) return arrs
+            var left = arrs.slice(0,Math.floor(arrs.length/2))
+            var right = arrs.slice(Math.floor(arrs.length/2))
+            return merge(left,right)
+        }
+        function merge(left,right){
+            if(left.length===0) return right
+            if(right.lenth===0) return left
+            return left[0]>right[0]?right[0].concat(merge(left,right.slice(1))):
+            left[0].concat(merge(right,left.slice(1)))
+        }
+        var arr=[10,2,3,66,4,6,2,2,3,0,5]
+        console.log(quickorder(arr))
     </script>
 </body>
 </html>
