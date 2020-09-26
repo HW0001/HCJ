@@ -53,6 +53,30 @@
             left[0].concat(merge(right,left.slice(1)))
         }
         var arr=[10,2,3,66,4,6,2,2,3,0,5]
+        //console.log(quickorder(arr))
+
+        //4.计数排序
+        function hashorder(arrs){
+            var hashtab={}
+            var max = 0
+            var result=[]
+           for (let i = 0; i < arrs.length; i++) {
+               if(arr[i] in hashtab)
+               hashtab[arr[i]]+=1
+               else
+               hashtab[arr[i]]=1
+               arr[i]>max?max=arr[i]:""
+           }
+           for (let j = 0; j < max; j++) {
+                if(j in hashtab)
+                {
+                    for (let p = 0; p < hashtab[j]; p++) {
+                        result.push(j) 
+                    }
+                }
+           }
+        }
+        var arr=[10,2,3,66,4,6,2,0,2,3,0,5]
         console.log(quickorder(arr))
     </script>
 </body>
