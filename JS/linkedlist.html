@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let createNode = value => {return {data:value,next:null} }
+        let createList = value=> createNode(value)
+        let appendNode = (list,value)=>{
+            let x=list 
+            while(x.next){
+                x=x.next
+            }
+            let node=createNode(value)
+            x.next=node
+            return node
+        }
+        let deletenode=(list,node)=>{
+            let x =list
+            let p
+            while(x && x!==node)
+            {
+                p=x
+                x=x.next
+            }
+            p.next=x.next
+        }
+
+
+        let list = createList(10)
+        console.log(list);
+        let node1 = appendNode(list,20)
+        let node2 = appendNode(list,30)
+        let node3 = appendNode(list,40)
+        console.log(list);
+        deletenode(list,node2)
+        console.log(list);
+    </script>
+</body>
+</html>
