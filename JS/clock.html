@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .div1{
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div2{
+            width: 350px;
+            height: 350px; 
+            background-color: #fff;
+            border-radius: 50%; 
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        .dhr{
+            width: 50%;
+            transform-origin: left;
+            transform: translate(50%) rotate(30deg); 
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            <hr class="dhr">
+        </div>
+    </div>
+</body>
+</html>
