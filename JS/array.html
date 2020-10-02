@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  array = [1,5,2,3,4,2,3,1,3,4]
+        let unique1=array=>{
+          return  array.reduce((pre,arr,a)=>{ 
+                pre.indexOf(arr)===-1 && pre.push(arr)
+                return pre
+            },[])
+
+        }
+        let unique2 = array=>{
+            let set = new Set(array)
+            return Array.from(set)
+        }
+
+        let unique =array=>{
+            let map = new Map()
+            array.forEach(element => {
+                !map.has(element) && map.set(element,1)
+            });
+            return Array.from(map.keys())
+        }
+        console.log(unique(array))
+
+    </script>
+</body>
+</html>
