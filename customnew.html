@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function customNew(){
+            const constructor = [].shift.call(arguments);
+            const obj = Object.create(constructor.prototype)
+            constructor.apply(obj,arguments)
+            return typeof obj ==='object'?obj:{}
+        }
+        function fn(name){
+            this.name=name;
+            this.age=18
+        }
+        fn.prototype.commont=function(){
+            console.log(222)
+        }
+        const newObj = customNew(fn,"张三");
+        console.log(newObj);
+    </script>
+</body>
+</html>
