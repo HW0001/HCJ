@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+        .children{
+            height: 600px;
+            width: 50%;
+            border: 1px solid burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id='app'>
+        <div class="children"></div>
+    </div>
+    <script>
+        let isLoad=false
+        app.addEventListener("scroll",function(e){
+           const {target}=e
+           const {scrollTop,scrollLeft}=target
+           const {height}=target.getBoundingClientRect()
+           if(scrollTop/height>0.75 && !isLoad){
+            isLoad=true
+            loadData()
+           }
+        })
+     function loadData(){
+         const d = document.createElement("div")
+         d.innerText='我是加载的海量数据'
+         app.appendChild(d)
+     }
+    </script>
+</body>
+</html>
