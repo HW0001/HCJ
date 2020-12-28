@@ -8,20 +8,33 @@
 <body>
     <script>
         function customNew(){
-            const constructor = [].shift.call(arguments);
+            const constructor = [].shift.call(arguments)
             const obj = Object.create(constructor.prototype)
             constructor.apply(obj,arguments)
             return typeof obj ==='object'?obj:{}
         }
+
+        function customNewOther(){
+            const obj ={}
+            const constructor = [].shift.call(arguments)
+            obj.__proto__=constructor.prototype
+            constructor.apply(obj,arguments)
+            return obj
+        }
+
         function fn(name){
-            this.name=name;
+            this.name=name
             this.age=18
         }
         fn.prototype.commont=function(){
             console.log(222)
         }
-        const newObj = customNew(fn,"张三");
-        console.log(newObj);
+        const obj = new fn("王五")
+        console.log(obj)
+        const newObj = customNew(fn,"张三")
+        console.log(newObj)
+        const newObjOther = customNewOther(fn,"李四")
+        console.log(newObjOther)
     </script>
 </body>
 </html>
