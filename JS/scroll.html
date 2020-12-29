@@ -12,7 +12,7 @@
             overflow: auto;
         }
         .children{
-            height: 600px;
+            height: 700px;
             width: 50%;
             border: 1px solid burlywood;
         }
@@ -27,6 +27,7 @@
         app.addEventListener("scroll",function(e){
            const {target}=e
            const {scrollTop,scrollLeft}=target
+           console.log(scrollTop)
            const {height}=target.getBoundingClientRect()
            if(scrollTop/height>0.75 && !isLoad){
             isLoad=true
