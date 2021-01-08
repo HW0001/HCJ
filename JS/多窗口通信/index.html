@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span>测试</span>
+        <button id='btn'>显示窗体</button>
+    </div>
+    <script>
+
+        // window.addEventListener('message',function(event) {
+        //     if(event.origin !== 'http://127.0.0.1:8080') return;
+        //     console.log('received response:  ',event.data);
+        // },false);
+
+        // let controller=null;
+        // btn.onclick = function () {
+        //     controller  = window.open('http://127.0.0.1:8080/a.html', '控制', {
+        //         strWindowName: "_blank"
+        //     })
+        //     controller.sendMessage = function () {
+        //         console.log(2);
+        //         controller.postMessage('我是发送的数据','http://127.0.0.1:8080');
+        //     }
+        // }
+        btn.onclick = function () {
+        var domain = 'http://127.0.0.1:8080';
+var myPopup =  window.open(domain+'/a.html', '控制', {
+                strWindowName: "_blank"
+            })
+
+         
+}  
+
+//监听消息反馈
+window.addEventListener('message',function(event) {
+	if(event.origin !== 'http://127.0.0.1:8080') return;
+	console.log('received response:  ',event.data);
+},false);
+    </script>
+</body>
+
+</html>

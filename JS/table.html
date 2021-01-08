@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            width: 350px;
+            height: 100px;
+            overflow: auto;
+        }
+        .div>table{
+            width: 1000px;
+            height: 200px;
+            overflow:auto;
+        }
+        .div tr{
+            height: 20px;
+        }
+        .div td,.div th{
+            width: 50px;
+            height: 20px;
+        }
+        .static{
+            position: sticky;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div" id='div'>
+        <table id='table'>
+            <tbody>
+                <tr>
+                    <th class="static">一</th>
+                    <th class="static">一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                    <th>一</th>
+                </tr>
+                <tr>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                </tr>
+                <tr>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                </tr>
+                <tr>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                </tr>
+                <tr>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                </tr>
+                <tr>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                </tr>
+                <tr>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                    <td>第一列</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var tb = document.getElementById("table")
+        var div = document.getElementById("div")
+        div.addEventListener("scroll",function(e){
+            Array.from(tb.querySelectorAll("th")).forEach(el=>{
+                el.scrollTop=0+'px'
+            })
+        })
+    </script>
+</body>
+</html>

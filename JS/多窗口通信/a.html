@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span>控制界面</span>
+        <button id='btn'>发送消息</button>
+    </div>
+
+    <script>
+        btn.addEventListener("click", function () {
+            sendMessage()
+        })
+        function sendMessage() {
+            var domain = 'http://127.0.0.1:8080';
+            console.log(2);
+            var message = 'Hello!  The time is: ' + (new Date().getTime());
+            //send the message and target URI
+            window.postMessage(message, domain);
+        }
+    </script>
+</body>
+
+</html>
